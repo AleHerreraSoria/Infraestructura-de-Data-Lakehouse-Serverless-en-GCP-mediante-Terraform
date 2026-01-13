@@ -1,6 +1,6 @@
 # Datastream Analytics Lite 🚀
 
-> Serverless Data Lakehouse infrastructure on GCP using Terraform.
+> Infraestructura de Data Lakehouse Serverless en GCP, usando Terraform.
 
 ## 📋 Descripción del Proyecto
 
@@ -16,8 +16,6 @@ La solución sigue un enfoque **Zero-ETL** utilizando Tablas Externas de BigQuer
 4. **Seguridad:** Gestión de identidades vía Service Accounts y `terraform.tfvars` (excluido del repo).
 
 ```mermaid
-```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#e1f5fe', 'edgeLabelBackground':'#ffffff', 'tertiaryColor': '#f3e5f5'}}}%%
 flowchart LR
     subgraph Local ["💻 Estación de Trabajo Local (VS Code)"]
         direction TB
@@ -30,7 +28,7 @@ flowchart LR
         subgraph Storage ["Cloud Storage (Data Lake)"]
             Bucket[("🪣 Bucket\n(datastream-lite...)")]
         end
-  
+        
         subgraph Analytics ["BigQuery (Data Warehouse)"]
             Dataset[("🧠 Dataset\n(analytics_lite)")]
             Tables["📑 Tablas Externas\n(Esquema Lógico)"]
@@ -45,25 +43,22 @@ flowchart LR
 
     %% Relaciones Lógicas
     Dataset --- Tables
-  
-    %% El truco del Lakehouse (Línea punteada = Lectura externa)
+    
+    %% El truco del Lakehouse
     Tables -.-> |"⚡ 2. Lectura en vivo sin copia\n(Zero-ETL)"| Bucket
 
     %% Flujo de Consumo
     Consumer == "3. Ejecuta Query" ==> Tables
 
-    %% Estilos
+    %% Estilos simples
     classDef storage fill:#e1f5fe,stroke:#0288d1,stroke-width:2px;
     classDef compute fill:#fff3e0,stroke:#f57c00,stroke-width:2px;
     classDef local fill:#f5f5f5,stroke:#616161,stroke-width:1px,stroke-dasharray: 5 5;
-  
+    
     class Bucket storage;
     class Tables,Dataset compute;
     class Local local;
-```
 
-
-```
 🛠️ Stack Tecnológico
 * **Google Cloud Platform** (Free Tier compliant)
 * **Terraform** (IaC)
