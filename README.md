@@ -60,7 +60,7 @@ flowchart LR
     class Local local;
 ```
 
-🛠️ Stack Tecnológico
+## 🛠️ Stack Tecnológico
 * **Google Cloud Platform** (Free Tier compliant)
 * **Terraform** (IaC)
 * **BigQuery** (SQL Analytics)
