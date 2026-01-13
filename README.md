@@ -58,6 +58,7 @@ flowchart LR
     class Bucket storage;
     class Tables,Dataset compute;
     class Local local;
+```
 
 🛠️ Stack Tecnológico
 * **Google Cloud Platform** (Free Tier compliant)
@@ -74,7 +75,7 @@ Pre-requisitos: Google Cloud SDK instalado y Terraform.
 
    ```bash
    git clone [https://github.com/AleHerreraSoria/Infraestructura-de-Data-Lakehouse-Serverless-en-GCP-mediante-Terraform.git](https://github.com/AleHerreraSoria/Infraestructura-de-Data-Lakehouse-Serverless-en-GCP-mediante-Terraform.git)
-```
+   ```
 
 2. **Configurar variables:**
    Crear un archivo `terraform.tfvars` con tu `project_id`:
