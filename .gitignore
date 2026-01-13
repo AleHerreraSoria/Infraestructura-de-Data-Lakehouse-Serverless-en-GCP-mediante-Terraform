@@ -1,0 +1,26 @@
+# Archivos de estado de Terraform
+# (¡CRITICO! Contienen info sensible de tu infra)
+# Error común: subir el archivo .tfstate (si alguien lo tiene, sabe exactamente qué atacar).
+# Al ignorarlo, el repo queda limpio y seguro.
+*.tfstate
+*.tfstate.backup
+
+# Directorio de plugins descargados
+.terraform/
+.terraform.lock.hcl
+
+# Archivos de variables con secretos (Tus credenciales y IDs)
+*.tfvars
+*.auto.tfvars
+
+# Logs de error
+crash.log
+*.log
+
+# Archivos del sistema operativo (Basura de Mac/Windows)
+.DS_Store
+Thumbs.db
+
+# Configuración de IDE (opcional, pero recomendado)
+.vscode/
+.idea/

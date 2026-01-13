@@ -1,0 +1,4 @@
+user_id,nombre,email,pais,plan,fecha_registro
+U001,Camila Torres,camila@ejemplo.com,Argentina,Gratuito,2025-05-20
+U002,João Silva,joao@ejemplo.com.br,Brasil,Premium,2025-05-22
+U003,Laura Fernández,laura@ejemplo.com,México,Gratuito,2025-05-25

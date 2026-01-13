@@ -1,0 +1,4 @@
+video_id,titulo,categoria,duracion_min,formato,fecha_subida,url_s3
+VID001,Introducción a Python,Programación,15,mp4,2025-06-01 10:23:00,s3://datastream-uploads/python/VID001.mp4
+VID002,Álgebra básica,Matemáticas,20,mkv,2025-06-01 14:10:00,s3://datastream-uploads/matematicas/VID002.mkv
+VID003,Fundamentos de AWS,Cloud,25,mp4,2025-06-02 09:45:00,s3://datastream-uploads/cloud/VID003.mp4

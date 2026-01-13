@@ -1,0 +1,4 @@
+event_id,video_id,accion,timestamp,resultado
+E001,VID001,conversión a mp4,2025-06-01 10:25:00,success
+E002,VID002,conversión a mp4,2025-06-01 14:12:00,success
+E003,VID003,verificación virus,2025-06-02 09:50:00,passed

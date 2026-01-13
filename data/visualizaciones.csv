@@ -1,0 +1,4 @@
+log_id,user_id,video_id,timestamp,minutos_vistos,dispositivo
+L001,U001,VID001,2025-06-01 11:00:00,15,mobile_android
+L002,U002,VID002,2025-06-01 14:45:00,20,smart_tv
+L003,U003,VID003,2025-06-02 10:00:00,10,desktop_windows
