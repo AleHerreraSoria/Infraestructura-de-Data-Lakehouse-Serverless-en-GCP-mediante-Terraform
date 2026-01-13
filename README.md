@@ -1,6 +1,8 @@
 # Datastream Analytics Lite 🚀
 
-> Infraestructura de Data Lakehouse Serverless en GCP, usando Terraform.
+### Infraestructura de Data Lakehouse Serverless en GCP, usando Terraform.
+### Desarrollado por: Alejandro Nelson Herrera Soria
+### Linkedin: https://www.linkedin.com/in/alejandro-nelson-herrera-soria
 
 ## 📋 Descripción del Proyecto
 
