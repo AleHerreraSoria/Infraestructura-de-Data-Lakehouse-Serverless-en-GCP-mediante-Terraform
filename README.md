@@ -21,33 +21,33 @@ La solución sigue un enfoque **Zero-ETL** utilizando Tablas Externas de BigQuer
 flowchart LR
     subgraph Local ["💻 Estación de Trabajo Local (VS Code)"]
         direction TB
-        CSV[/"📄 Archivos CSV\n(Datos Crudos)"/]
-        TF["⚙️ Terraform CLI\n(IaC)"]
+        CSV[/"📄 Archivos CSV<br/>(Datos Crudos)"/]
+        TF["⚙️ Terraform CLI<br/>(IaC)"]
     end
 
     subgraph GCP ["☁️ Google Cloud Platform (Free Tier)"]
         direction LR
         subgraph Storage ["Cloud Storage (Data Lake)"]
-            Bucket[("🪣 Bucket\n(datastream-lite...)")]
+            Bucket[("🪣 Bucket<br/>(datastream-lite...)")]
         end
         
         subgraph Analytics ["BigQuery (Data Warehouse)"]
-            Dataset[("🧠 Dataset\n(analytics_lite)")]
-            Tables["📑 Tablas Externas\n(Esquema Lógico)"]
+            Dataset[("🧠 Dataset<br/>(analytics_lite)")]
+            Tables["📑 Tablas Externas<br/>(Esquema Lógico)"]
         end
     end
 
-    Consumer("🧑‍💻 Analista / DBeaver\n(Consultas SQL)")
+    Consumer("🧑‍💻 Analista / DBeaver<br/>(Consultas SQL)")
 
     %% Flujo de Despliegue
-    TF -- "1. terraform apply\n(Despliega & Sube)" --> GCP
+    TF -- "1. terraform apply<br/>(Despliega & Sube)" --> GCP
     CSV -.->|"Subida automática"| Bucket
 
     %% Relaciones Lógicas
     Dataset --- Tables
     
     %% El truco del Lakehouse
-    Tables -.-> |"⚡ 2. Lectura en vivo sin copia\n(Zero-ETL)"| Bucket
+    Tables -.-> |"⚡ 2. Lectura en vivo sin copia<br/>(Zero-ETL)"| Bucket
 
     %% Flujo de Consumo
     Consumer == "3. Ejecuta Query" ==> Tables
